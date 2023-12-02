@@ -1,0 +1,491 @@
+/* font do google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;/* serve para tirar o espaço da pagina */
+    padding: 0;/* serve para tirar o espaço da pagina */
+    box-sizing: border-box; /* serve para corrigir o tamanho */
+    outline: none;/* serve para tirar a barra azul que si cria no menu*/
+    font-family: 'Roboto', sans-serif;
+}
+/* cores que utilizamos */
+:root {
+
+    --rosa-escuro: #FF1493;
+    --rosa-quente: #FF69B4;
+    --rosapalevioletrado: #DB7093;
+    --médio-violento: #C71585;
+    --branco: #ffff;
+    --vermelho: #FF0000;
+}
+
+html,
+body {
+    width: 100%; /* serve para tirar a barra de rolage na orizontal*/
+    overflow-x: hidden;/* serve para tirar a barra de rolage na orizontal*/
+}
+
+header {
+    width: 100%;
+    height: 500px;
+    background: var(--rosapalevioletrado);
+}
+
+.content {
+    max-width: 1000px; /* essa abordagem e para deichar responsivo */
+    min-width: 300px; /* essa abordagem e para deichar responsivo */
+    margin: 0 auto;/* serve para deichar alinhado ao centro */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;/*serve para dar espaços entre os elementos */
+}
+
+/* daqui para frente sao parte do codigo da lista do menu */
+nav {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: 24px;
+    color: var(--branco);
+    cursor: pointer; /* serve para quando passar o mauser fazer efeito maozinha*/
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    list-style: none;/*vai tirar os marcadores  os ponto da frente da lista */
+    padding: 10px; /*vai dar espacamentos entre as lista  */
+    cursor: pointer;/* serve para quando passar o mauser vire uma maozinha*/
+}
+
+nav ul li a {
+    color: var(--branco);
+    text-decoration: none; /*serve para tirar a barra das lista  */
+}
+
+nav ul li a:hover { /*  hover:serve para fazer o efeito de trocar as cores do menu*/
+    color: var(--médio-violento);
+}
+
+/* essa parte e do codigo do button  */
+nav ul button {
+    border: 1px solid var(--branco);
+    background: transparent; /* serve para deichar o fundo transparente*/
+    padding: 8px 40px; /* serve para dar espacamento dentro do button*/
+    cursor: pointer;   /* serve para quando passar o mauser fazer efeito maozinha*/
+    margin-left: 30px; /* serve para distanciar o button */
+    color: var(--branco);
+    font-weight: bold;/* serve para deicha a font mais grossa */
+    border-radius: 4px;/* serve para arredondar a borda do button */
+}
+
+nav ul button:hover {
+    transition: background, color 0.6s;/* serva para fazer a trasição */
+    background: var(--médio-violento);
+    color: #ffff;
+}
+
+/* essa parte pertence aos elemnetos que esta dentro do background */
+.content .header-block {
+    max-width: 1000px;/* essa abordagem e para deichar responsivo */
+    min-width: 300px;/* essa abordagem e para deichar responsivo */
+    height: 450px;
+    background: var(--rosapalevioletrado);
+    border-radius: 8px;
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);/* serve para fazer um sobreamneto no background*/
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);/* serve para garantir que vai rodar em outros navegadores */
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);/* serve para garantir que vai rodar em outros navegadores */
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+}
+
+/* parte da  img */
+.header-block img {
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    right: 2%;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+/* parte do texto proximo a immagem*/
+.header-block .text {
+    position: absolute;
+    bottom: 35%;
+    left: 15%;
+}
+
+.header-block .text h2 {
+    color: var(--branco);
+    margin-bottom: 20px;
+    text-align: right;
+    transform: translateX(-30px);/* faz uma animação no texto */
+    transition: transform 0.5s;/* faz uma animação no texto */
+}
+.right h3 {
+color: var(--branco);
+}
+
+.header-block .text p {
+    max-width: 250px;
+    color: var(--branco);
+    text-align: right;
+    transform: translateX(-30px);  /* faz uma animação no texto */
+    transition: transform 0.4s; /* faz uma animação no texto */
+}
+
+/* parte dos catalago */
+section .catalago {
+    width: 100vw;
+    padding: 100px;
+}
+
+
+section .filter-card {
+    width: 980px;
+    height: 150px;
+    background: var(--rosapalevioletrado);
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+    width: 700px;
+    height: 50px;
+    border: none; /*faz com fique sem borda */
+    border-radius: 8px;
+    text-indent: 10px;/*faz com que distancia o elemento */
+
+}
+
+.search-button {
+    width: 150px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background: var(--médio-violento);
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-align: center;
+    padding-bottom: 20px;
+    line-height:45px; /*serve para posicionar text do buttom */
+    
+
+}
+
+.search-button:hover {
+    background: var(--rosa-quente);
+}
+
+.title-wrapper-catalogo {
+    margin-top: 150px;
+    padding-bottom: 20px;
+}
+
+section .card-warepper {
+    max-width: 1000px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 30px;
+    padding: 50px;
+}
+
+section .card-item {
+    height: 300px;
+    background: var(--médio-violento);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+.card-content {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.card-item img {
+    width: 100%;
+    height: 60%;
+    border-radius: 8px;
+}
+
+.card-item h4 {
+    width: 90%;
+
+}
+
+.card-item p {
+    width: 90%;
+    font-style: italic;
+    color: var(--branco);
+}
+
+.card-item button {
+    width: 98%;
+    padding: 15px 0px;
+    border: none;
+    background-color: var(--rosa-quente);
+    border-radius: 5px;
+    color: var(--branco);
+    font: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3 ease;
+}
+
+.card-item button:hover {
+    background: #FF1493;
+
+}
+
+/* parte do about */
+
+.about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+.about-content {
+    max-width: 1000px;
+    min-width: 300px;
+    height: 600px;
+    background: var(--rosapalevioletrado);
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+img{
+    width: 110%;
+    height: 100%;
+}
+
+.left  {
+    width: 25%;
+    height:100% ;
+    min-width: 300px;
+    background: #FF00001a;
+    border-radius: 8px;
+}
+.right{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+    padding-top: 10px;
+}
+.right h3{
+    text-align: right;
+    width: 90%;
+    margin-bottom: 20px;
+}
+.right p{
+    max-width: 90%;
+    font-size: 1em;
+    text-align: right;
+    color: rgba(0,0,0, 0.5);
+   
+}
+
+/* parte do Features */
+
+.feature{
+    width: 100%;
+    height: 100%;
+    background: var(--rosa-quente);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+.title-wrapper-feature{
+    padding: 20px 0px;
+}
+
+.feature-card-block{
+    max-width: 1000px;
+    min-width: 300px;
+    height: 600px;
+    background: var(--branco);
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
+    grid-gap:30px;
+}
+
+.feature-card-item{
+    max-width: 420px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--médio-violento);
+    border-radius: 2px;
+}
+
+.feature-text-content{
+    max-width: 60%;
+    margin: 60px;
+}
+
+.feature-card-item img{
+    width: 64px;
+    height: 64px;    
+}
+
+/* parte do rodape Footer*/
+
+footer {
+    width: 100%;
+    height: 250px;
+}
+footer .main {
+    width: 100%;
+    height: 200px;
+    background: var(--rosa-escuro);
+    padding: 20px 10px;
+}
+
+.footer-links {
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.footer-campany , 
+.footer-rental , 
+.footer-contact, 
+.footer-social{
+    color: var(--branco);
+    height: 100%;
+    min-height: 100px;
+}
+.footer-links h4{
+    margin-bottom: 10px;
+}
+.footer-links {
+    margin-bottom:8px;  
+}
+.main .footer-social img{
+    width: 32px;
+    height: 32px;
+   
+}
+footer .last{
+    width: 100%;
+    height: 50px;
+    background: var(--rosa-quente);
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* parte  responsivo do da pagina */
+
+@media (max-width: 576px){
+    nav ul li{
+        display: none;
+    }
+    .header-block img {
+        width: 70%;
+        height: 60%;
+        position: absolute;
+        right: 19%;
+        top: 0%;   
+     
+    }
+    .header-block .text{
+        position: absolute;
+        bottom: 9%;
+        left: 20%;
+    }
+    section .filter-card {
+        width: 390px;
+        padding: 0px 10px;
+    }
+    .search-input {
+        max-width: 700px;
+        min-width: 240px;
+    }
+    .search-button{
+        max-width: 150px;
+        min-width: 80px;
+    }
+    .about{
+        margin-top: 100px;
+    }
+    .title-wrapper-about{
+        margin-bottom: 20px;
+    }
+    .about-content{
+        flex-direction: column;
+        height: 100%;
+    }
+    .right{
+        width: 90%;
+    }
+    .right p {
+        width: 100%;
+        margin: 0px;
+        text-align: left;
+    }
+    .features{
+        height: 100%;
+    }
+    .feature-card-block {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        height: 100%;
+    }
+    footer .main {
+        height: 100%;
+    }
+    .footer-links {
+        flex-direction: column;
+        padding-left: 10%;
+    }
+}
